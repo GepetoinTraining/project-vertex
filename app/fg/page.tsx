@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Download } from 'lucide-react'
 import CraftPrompt from '@/components/CraftPrompt'
 
 // --- VERCEL BLOB ASSETS ---
@@ -35,7 +36,7 @@ const SCENES = [
     id: 3,
     video: VIDEO_VICTORY,
     telemetry: "SISTEMA: LIQUIDEZ RESTAURADA",
-    title: "A MANOBRA CCP",
+    title: "A MANOBRA SCP",
     text: "Nós estancamos a sangria. Nós assumimos a Força-G. Nós fracionamos o risco para o capital global. Vocês terminam a corrida; nós pagamos o combustível.",
     btn: "Assinar Term Sheet",
     theme: "glory"
