@@ -5,9 +5,9 @@ import { Download } from 'lucide-react'
 import CraftPrompt from '@/components/CraftPrompt'
 
 // --- VERCEL BLOB ASSETS ---
-const VIDEO_CONSTRUCTION = "https://[YOUR_HASH].public.blob.vercel-storage.com/tower_render.mp4" 
-const VIDEO_FINAL_CURVE = "https://[YOUR_HASH].public.blob.vercel-storage.com/fg_crash_optimized.mp4" 
-const VIDEO_VICTORY = "https://[YOUR_HASH].public.blob.vercel-storage.com/fg_victory.mp4"
+const VIDEO_CONSTRUCTION = "https://s8vgnbofam2djlq5.public.blob.vercel-storage.com/tower_render.mp4" 
+const VIDEO_FINAL_CURVE = "https://s8vgnbofam2djlq5.public.blob.vercel-storage.com/fg_rear_wing.mp4" 
+const VIDEO_VICTORY = "https://s8vgnbofam2djlq5.public.blob.vercel-storage.com/fg_victory.mp4"
 
 // --- PDF ASSETS ---
 const PDF_RED_TEAM = "https://s8vgnbofam2djlq5.public.blob.vercel-storage.com/Red%20Team%20Analysis%20of%20Real%20Estate%20Pitch.pdf"
