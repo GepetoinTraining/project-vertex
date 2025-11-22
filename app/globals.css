@@ -8,13 +8,14 @@
   --background-end-rgb: 0, 0, 0;
 }
 
+/* Force dark mode default */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: black;
-  overflow-x: hidden; /* Prevent horizontal scroll on animations */
+  color: #fff;
+  background: #050505;
+  overflow-x: hidden; /* Critical for your scroll animations */
 }
 
-/* Custom Scrollbar for the Terminal/Prompt components */
+/* Scrollbar styling for the prompts */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -24,7 +25,4 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 3px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
