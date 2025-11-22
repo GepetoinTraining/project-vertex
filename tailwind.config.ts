@@ -2,9 +2,14 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    // This catches everything in the app router
+    "./app/**/*.{js,ts,jsx,tsx,mdx}", 
+    // This catches your components folder
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    // This catches any root pages (if you still have the /pages directory)
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    // SAFETY NET: If you have source folder
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -28,10 +33,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        hero: ["var(--font-hero)"],      // Anton (Impact)
-        narrative: ["var(--font-narrative)"], // Merriweather (Story)
-        sans: ["var(--font-sans)"],      // Montserrat (Modern)
-        tech: ["var(--font-tech)"],      // Roboto Mono (Data)
+        hero: ["var(--font-hero)", "sans-serif"],
+        narrative: ["var(--font-narrative)", "serif"],
+        sans: ["var(--font-sans)", "sans-serif"],
+        tech: ["var(--font-tech)", "monospace"],
       },
       backgroundImage: {
         'radial-white': 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)',
