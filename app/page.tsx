@@ -1,65 +1,74 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { ArrowRight, Lock, Shield, Users } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <main className="min-h-screen bg-[#050505] text-white font-mono flex flex-col items-center justify-center p-6 selection:bg-[#D90429] selection:text-white">
+      
+      {/* HEADER */}
+      <div className="w-full max-w-2xl mb-12 text-center border-b border-white/10 pb-8">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-2">PROJECT VERTEX</h1>
+        <p className="text-gray-500 text-xs tracking-[0.3em] uppercase">Authorized Personnel Only // Level 4 Clearance</p>
+      </div>
+
+      {/* THE DIRECTORY */}
+      <div className="w-full max-w-2xl grid gap-4">
+        
+        {/* LINK 1: MORGANA (THE KEY) */}
+        <Link href="/morgana" className="group relative block bg-[#0a0a0a] border border-white/10 p-6 hover:border-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37]/5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-white/5 rounded-none group-hover:bg-[#D4AF37] group-hover:text-black transition-colors">
+                 <Shield size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold group-hover:text-[#D4AF37] transition-colors">PROTOCOL: M.L.B.</h3>
+                <p className="text-xs text-gray-600 uppercase tracking-wider">Strategic Partner // Access</p>
+              </div>
+            </div>
+            <ArrowRight className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#D4AF37]" />
+          </div>
+        </Link>
+
+        {/* LINK 2: FG (THE NIGHTMARE) */}
+        <Link href="/fg" className="group relative block bg-[#0a0a0a] border border-white/10 p-6 hover:border-[#D90429] transition-all duration-300 hover:bg-[#D90429]/5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-white/5 rounded-none group-hover:bg-[#D90429] group-hover:text-white transition-colors">
+                 <Lock size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold group-hover:text-[#D90429] transition-colors">PROTOCOL: BOARDROOM</h3>
+                <p className="text-xs text-gray-600 uppercase tracking-wider">FG Empreendimentos // Financial</p>
+              </div>
+            </div>
+            <ArrowRight className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#D90429]" />
+          </div>
+        </Link>
+
+        {/* LINK 3: INVESTOR (THE DREAM) */}
+        <Link href="/investor" className="group relative block bg-[#0a0a0a] border border-white/10 p-6 hover:border-[#FFD700] transition-all duration-300 hover:bg-[#FFD700]/5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-white/5 rounded-none group-hover:bg-[#FFD700] group-hover:text-black transition-colors">
+                 <Users size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold group-hover:text-[#FFD700] transition-colors">PROTOCOL: ASCENSION</h3>
+                <p className="text-xs text-gray-600 uppercase tracking-wider">Private Family Office // Presentation</p>
+              </div>
+            </div>
+            <ArrowRight className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#FFD700]" />
+          </div>
+        </Link>
+
+      </div>
+
+      <footer className="mt-24 text-center text-xs text-gray-800 font-mono">
+        SECURE CONNECTION ESTABLISHED <br/>
+        NODE: BALNEÁRIO CAMBORIÚ
+      </footer>
+
+    </main>
+  )
 }
